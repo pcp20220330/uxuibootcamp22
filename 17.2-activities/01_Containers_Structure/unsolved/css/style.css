@@ -1,0 +1,175 @@
+/*  Hi! your going to write styles here in the next couple activities. */
+
+body{
+    font-family:'Open Sans', Sans-Serif;
+}
+
+#header {
+    height: 250px;
+    max-height: 500px;
+    background-image: url(../images/upsBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.pageTopic {
+    text-align: center;
+}
+
+.colorContainer {
+    display:inline-block;
+    border: 1px solid black;
+    border-radius: 0px 0px 7px 7px;
+    margin: 15px;
+}
+
+.swatch {
+    width: 100px;
+    height: 100px;
+    border-bottom: 1px solid black;
+}
+
+.hexCode {
+    padding: 15px;
+    text-align: center;
+}
+
+.darkBlue {
+    background-color: #336;
+}
+
+.darkGrey {
+    background-color: #545454;
+}
+
+.lightGrey {
+    background-color: #E3E3E3;
+}
+
+.White {
+    background-color: #fff;
+}
+
+.lightBlue {
+    background-color: #13A0F6;
+}
+
+.red {
+    background-color: #F84848;
+}
+
+.orange {
+    background-color: #FC7705;
+}
+
+.lightGreen {
+    background-color: #8ABE48;
+}
+
+.type_container {
+    display:inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.large {
+    font-size: 66px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+
+.light {
+    font-weight: 100;
+}
+
+.regular {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+#typography h1 {
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: 900;
+}
+
+#typography h2 {
+    font-size: 42px;
+    line-height: 60px;
+    font-weight: 700;
+}
+
+#typography h3 {
+    font-size: 34px;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+#typography h4 {
+    font-size: 26px;
+    line-height: 28px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px;
+    margin: 15px;
+    width: 150px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.primary {
+    background-color: #2b459A;
+}
+
+.primaryActive {
+    background-color: #3A66B7;
+}
+
+.success {
+    background-color: #8abe48;
+}
+
+.successActive {
+    background-color: #668C35;
+}
+
+.danger {
+    background-color: #F84848;
+}
+
+.dangerActive {
+    background-color: #AD4848;
+}
+
+.warning {
+    background-color: #FC7705;
+}
+
+.warningActive {
+    background-color: #BA7A43;
+}
+
+.info {
+    background-color: #0099FA;
+}
+
+.infoActive {
+    background-color: #4386BA;
+}
+
+.sectionHead {
+    border-bottom: 8px solid #ddd;
+}
