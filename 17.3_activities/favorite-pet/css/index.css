@@ -1,0 +1,63 @@
+body {
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+nav {
+  background-color: lightgrey;
+  border-bottom: 1px solid black;
+}
+
+nav div {
+  display: inline-block;
+  padding: 25px 20px;
+  width: 75px;
+  background-color: #555;
+  color:white;
+  text-align: center;
+}
+
+.left {
+  width: 29%;
+  height: 100vh;
+  float: left;
+  border-right: 1px solid black;
+  background-color: #c9f8b7;
+}
+
+.details {
+  padding-left: 20px;
+}
+
+.right {
+  width: 70%;
+  height: 100vh;
+  float: left;
+  background-color: #f8c2d1;
+}
+
+.profile {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+.content {
+  padding-left: 20px;
+}
+
+.mainpic {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 5px;
+  border:5px solid #ddd;
+}
+
+.morepics {
+  text-align: center;
+}
+
+.morepics img {
+  border:5px solid #ddd;
+  margin: 10px;
+}
