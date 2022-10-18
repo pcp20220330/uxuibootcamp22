@@ -1,0 +1,206 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Grid CSS */
+#heroGrid {
+  margin: 0px 5%;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  grid-template-rows: 75% 25%;
+  grid-template-columns: 75% 25%;
+  grid-template-areas: "featuredProduct secondaryProduct"
+  "featuredProduct CTA";
+}
+
+#headline {
+  background-color: rgba(255,255,255,0.8);
+  position: absolute;
+  top: 5%;
+  right: -10%;
+  padding: 20px;
+  border-bottom: #ff6200 solid 5px;
+  z-index: 5;
+}
+
+
+#featuredProduct {
+  grid-area: featuredProduct;
+  background-image: url(../images/couch.png);
+}
+
+#secondaryProduct {
+  grid-area: secondaryProduct;
+  background-image: url(../images/furniture2.jpg);
+}
+
+#CTA {
+  background-image: url(../images/woodbg.png);
+  grid-area: CTA;
+  justify-content: 0% 5%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.heroGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+}
+
+#featuredProduct {
+  background-image: url(../images/furniture1.jpg);
+}
+
+
+/* Category Grid CSS */
+.subHeading {
+  margin: 50px auto;
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 300px;
+}
+
+#categoryGrid {
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "bookcases bedroom patio"
+  "couches couches patio"
+  "desks desks desks";
+  margin: 0 50px;
+}
+
+.categoryGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  position: relative;
+  margin: 5px;
+  cursor: pointer;
+  align-content: end;
+}
+
+#bookcases {
+  grid-area: bookcases;
+  background-image: url(../images/bookcases.png);
+}
+
+#bedroom {
+  grid-area: bedroom;
+  background-image: url(../images/beds.png);
+}
+
+#couches {
+  grid-area: couches;
+  background-image: url(../images/couch.png);
+}
+
+#patio {
+  grid-area: patio;
+  background-image: url(../images/patio.png);
+}
+
+#desks {
+  grid-area: desks;
+  background-image: url(../images/desks.png);
+}
+
+.heading {
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  padding: 15px;
+  height: 25px;
+  border-bottom: 5px solid #ff6200;
+}
+
+/* Navigation CSS */
+/* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
+#navBar {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 5%;
+}
+#navBar h1 {
+  width: 25%;
+  font-weight: 500;
+}
+#navigation {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#navigation p {
+  cursor: pointer;
+  text-decoration: none;
+}
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+}
+.icons img {
+  margin: 15px;
+  cursor: pointer;
+}
+.highlight {
+  color: #FF6200;
+  font-weight: 700;
+}
+
+/* Typography CSS */
+
+h2 {
+  font-size: 5vw;
+  margin: 0px 0px;
+  color: #FF6200;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0px 0px;
+}
+
+h4 {
+  color: white;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+
+#headline p {
+  max-width: 350px;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0px 0px;
+  color: #636364;
+}
+
+@media only screen and (max-width:600px) {
+  #headline {
+   position: static;
+   margin: 40px;
+  }
+ 
+  #heroGrid {
+   grid-template-areas: 
+   "featuredProduct featuredProduct"
+   "secondaryProduct CTA";
+  }
+ 
+  #categoryGrid {
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "bookcases" "bedroom" "couches" "patio" "desks";
+    margin: 0 20px;
+  }
+ }
