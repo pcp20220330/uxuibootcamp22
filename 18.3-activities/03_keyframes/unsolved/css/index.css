@@ -12,7 +12,7 @@
   margin-top: 61px;
   padding: 3px;
 }
-#progressbar > .orangeBar {
+#progressbar > .orangeBar { 
   background-color: red;
   width: 40%;
   height: 20px;

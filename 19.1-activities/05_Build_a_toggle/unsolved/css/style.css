@@ -1,0 +1,26 @@
+/* Style your dropdown below! */
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.toggle {
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img {
+    width: 15px;
+}
