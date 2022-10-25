@@ -1,11 +1,204 @@
 html {
-    width: 100%;
-}
-
-body {
     margin: 0px;
+    padding: 0px;
     min-height: 100%;
     height: 100vh;
-    background: linear-gradient(250deg, rgba(255, 85, 85, 0.2) 0%, rgba(255, 85, 85, 0) 100%), linear-gradient(111deg, rgba(85, 255, 85, 0.2) 0%, rgba(85, 255, 85, 0) 100%), linear-gradient(180deg, rgba(85, 85, 255, 0) 0%, rgba(85, 85, 255, 0.2) 100%), #FFFFFF;
+    width: 100%;
+    background: linear-gradient(250deg, rgba(255, 85, 85, 0.3) 0%, rgba(255, 85, 85, 0) 100%), linear-gradient(111deg, rgba(85, 255, 85, 0.3) 0%, rgba(85, 255, 85, 0) 100%), linear-gradient(180deg, rgba(85, 85, 255, 0) 0%, rgba(85, 85, 255, 0.4) 100%), #FFFFFF;
+    background-attachment: fixed;
 }
+
+body,div,section,footer,h1,h2,h3,ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    padding: 0px 150px;
+}
+
+.containerGrid {
+    display: grid;
+    grid-template-columns: 1fr 252px;
+    grid-template-rows: 35% 15% 50%;
+    grid-template-areas: "myName myFace"
+    "myTitle myFace"
+    "myTagline myFace";
+    padding: 0px;
+    margin:125px 0 25px 0;
+}
+
+.myName, .myTitle, .myTagline {
+    padding-right: 30px;
+}
+
+.myName {
+    grid-area: myName;
+    height:100%;
+    margin:0px;
+    
+}
+
+.myName h1 {
+    font-family: 'Futura', sans-serif;
+    font-style:normal;
+    font-weight:500;
+    font-size:64px;
+    line-height:85px;
+    border-bottom: 1px solid black;
+    padding: 0 0 20px 0;
+    margin:0;
+}
+
+.myTitle {
+    grid-area: myTitle;
+    margin:0;
+    font-family: 'Trebuchet MS';
+    font-style:normal;
+    font-weight:400;
+    size:24px;
+    line-height:28px;
+    text-align: right;
+}
+
+.myTagline {
+    grid-area: myTagline;
+    height:100%;
+    margin:0;
+    font-family:'Trebuchet MS';
+    font-style:normal;
+    font-weight:700;
+    font-size:30px;
+    line-height:35px;
+    margin:0px;
+    padding-top: 30px;
+}
+
+.myFaceBox {
+    grid-area: myFace;
+    display: flex;
+    margin:0;
+    padding: 10px 0;
+    align-items:center;
+}
+
+.myFace {
+    background: url(../images/Frame\ 28.png) no-repeat;
+    margin:0;
+    width:252px;
+    height: 252px;
+}
+
+nav {
+    display: inline-block;
+    width: 100%;
+    padding: 50px 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right:75px;
+}
+
+nav a {
+    font-family:'Trebuchet MS';
+    font-style:normal;
+    font-weight:600;
+    font-size:36px;
+    line-height:42px;
+    text-decoration: underline;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration:none;
+}
+
+section {
+    margin: 0;
+    padding: 0 150px;
+}
+
+.sectionOne {
+background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.section {
+    background:rgba(255, 255, 255, 0.5);
+}
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    padding: 50px 0;
+}
+
+.projectA {
+    grid-template-areas: "projectDescription projectImage";
+}
+
+.projectB {
+    grid-template-areas: "projectImage projectDescription";
+}
+
+
+.projectDescription {
+    grid-area: projectDescription;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    color: #111;
+}
+
+.projectDescription h1 {
+font-weight: 700;
+font-size: 64px;
+line-height: 74px;
+margin-bottom: 17px;
+}
+
+.projectHeadline {
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+margin-bottom: 17px;
+}
+
+.projectLink {
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+text-decoration-line: underline;
+color:#111;
+}
+
+.projectImage {
+    grid-area: projectImage;
+}
+
+footer {
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    padding:0 150px;
+    display: flex;
+    align-items: center;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+footer a {
+    font-family: 'Futura';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-decoration-line: underline;
+    color: #111;
+}
+
+
 
