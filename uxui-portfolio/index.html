@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="landingPage" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -14,12 +14,6 @@
 
 <body>
     <header>
-        <div class="containerGrid">
-            <div class="myName"><h1>Hi, my name is Preston</h1></div>
-            <h2 class="myTitle">User Experience Designer</h2>
-            <h2 class="myTagline">I design creative products centered in my values of Exploration, Community, and Humanity</h2>
-            <div class="myFaceBox"><div class="myFace"></div></div>
-        </div>
         <nav>
             <ul>
                 <li><a href="#">Résumé</a></li>
@@ -27,13 +21,48 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <div class="homeGrid">
+            <div class="myName">
+                <h1>Preston Casey Palmer</h1>
+                <h2 class="myTitle">User Experience Designer</h2>
+            </div>
+            
+            <h2 class="myTagline">Creating digital products centered in the values of Exploration, Community, and
+                Humanity</h2>
+            <div class="myFaceBox">
+                <div class="myFace"></div>
+            </div>
+        </div>
+
     </header>
+    <section id="mySkills">
+        <h1>My Skills</h1>
+        <div class="skillsContainer">
+            <div class="skillBox">
+                <img src="/images/user-research.png" />
+                <h3>User Research</h3>
+                <p class="skills">Stakeholder Interviews, Surveys, User Need Identification, Insight Synthesis, Persona
+                    Creation, Storyboarding</p>
+            </div>
+            <div class="skillBox">
+                <img src="/images/user-interface-design.png" />
+                <h3>User Interface Design</h3>
+                <p class="skills">Atomic Design, UI Grids and Composition, Heuristic Evaluation,
+                    Interaction Design, Decision Flow Diagrams, Figma & Figjam Prototyping</p>
+            </div>
+            <div class="skillBox">
+                <img src="/images/web-development.png" />
+                <h3>Web Development</h3>
+                <p class="skills">HTML, CSS, GitHub, Bootstrap, JavaScript, JQuery, PHP & MySQL</p>
+            </div>
+        </div>
+    </section>
     <section id="collectively" class="sectionOne">
         <div class="projectGrid projectA">
             <div class="projectDescription">
                 <h1 class="projectTitle">Collectively</h1>
                 <h3 class="projectHeadline">An app that helps people connect with their neighbors and community.</h3>
-                <a class="projectLink" href="#">View Casey Study</a>
+                <a class="projectLink" href="/collectively/">View Casey Study</a>
             </div>
             <img class="projectImage" src="images/Collectively.png" />
         </div>
@@ -42,7 +71,7 @@
         <div class="projectGrid projectB">
             <img class="projectImage" src="images/Website.png" />
             <div class="projectDescription">
-                <h1  class="projectTitle">Telling Stories</h1>
+                <h1 class="projectTitle">Telling Stories</h1>
                 <h3 class="projectHeadline">Creating an interactive story-based navigation for an artist's website.</h3>
                 <a class="projectLink" href="#">View Casey Study</a>
             </div>
