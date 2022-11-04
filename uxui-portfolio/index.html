@@ -9,60 +9,108 @@
     <link href="./styles/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
+    <div id="modal-overlay" class="hidden">
+        <div id="modal-background"></div>
+        <div id="modal">
+            <button class="close-button" id="close-modal"></button>
+            <h1>About Me</h1>
+            <div class="aboutFlex">
+                <img src="images/About-Portrait.png">
+                <p>
+                Hello, my name is Preston. I'm a content creator and designer dedicated to developing digital products with cutting edge design and graceful degradation.<br>
+                <br>
+                Since graduating with a Bachelor of Arts in Sociology, I have worked in both non-profit and
+                for-profit organizations to improve system flows and documentation while providing timely support to
+                my colleagues and leaders.<br>
+                <br>
+                Strengths in creativity, teamwork, and building projects from ideation to execution. Fine arts
+                background coupled with strong research skills and an eye for modern design principles, makes me a
+                valuable addition to teams with a healthy work culture.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Résumé</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+
         <div class="homeGrid">
             <div class="myName">
                 <h1>Preston Casey Palmer</h1>
                 <h2 class="myTitle">User Experience Designer</h2>
             </div>
-            
+
             <h2 class="myTagline">Creating digital products centered in the values of Exploration, Community, and
                 Humanity</h2>
             <div class="myFaceBox">
                 <div class="myFace"></div>
             </div>
         </div>
-
+        <nav>
+            <ul>
+                <li class="no-underline"><button class="button" id="open-modal" onclick="showModal()">About Me</button>
+                </li>
+                <li><a href="#">Résumé</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+
     <section id="mySkills">
         <h1>My Skills</h1>
         <div class="skillsContainer">
             <div class="skillBox">
                 <img src="images/user-research.png" />
                 <h3>User Research</h3>
-                <p class="skills">Stakeholder Interviews, Surveys, User Need Identification, Insight Synthesis, Persona
-                    Creation, Storyboarding</p>
+                <p class="skills">
+                <ul>
+                    <li>Stakeholder Interviews</li>
+                    <li>Surveys and Data Analysis</li>
+                    <li>User Need Identification</li>
+                    <li>Insight Synthesis</li>
+                    <li>Persona Creation</li>
+                    <li>Storyboarding</li>
+                </ul>
+                </p>
             </div>
             <div class="skillBox">
                 <img src="images/user-interface-design.png" />
                 <h3>User Interface Design</h3>
-                <p class="skills">Atomic Design, UI Grids and Composition, Heuristic Evaluation,
-                    Interaction Design, Decision Flow Diagrams, Figma & Figjam Prototyping</p>
+                <p class="skills">
+                <ul>
+                    <li>Atomic Design</li>
+                    <li>UI Grids and Composition</li>
+                    <li>Heuristic Evaluation</li>
+                    <li>Interaction Design</li>
+                    <li>Decision Flow Diagrams</li>
+                </ul>
+                Figma - Invision - Miro
+                </p>
             </div>
             <div class="skillBox">
                 <img src="images/web-development.png" />
                 <h3>Web Development</h3>
-                <p class="skills">HTML, CSS, GitHub, Bootstrap, JavaScript, JQuery, PHP & MySQL</p>
+                <p class="skills">
+
+                    HTML - CSS - GitHub, Bootstrap, JavaScript, JQuery, PHP & MySQL</p>
             </div>
         </div>
     </section>
-    <section id="collectively" class="sectionOne">
-        <div class="projectGrid projectA">
+    <section class="sectionOne">
+        <h1>My Projects</h1>
+        <div id="collectively" class="projectGrid projectA">
             <div class="projectDescription">
-                <h1 class="projectTitle">Collectively</h1>
+                <h2 class="projectTitle">Collectively</h2>
                 <h3 class="projectHeadline">An app that helps people connect with their neighbors and community.</h3>
-                <a class="projectLink" href="/collectively/">View Casey Study</a>
+                <a class="projectLink" href="/collectively/">View Case Study</a>
             </div>
             <img class="projectImage" src="images/Collectively.png" />
         </div>
@@ -71,9 +119,9 @@
         <div class="projectGrid projectB">
             <img class="projectImage" src="images/Website.png" />
             <div class="projectDescription">
-                <h1 class="projectTitle">Telling Stories</h1>
+                <h2 class="projectTitle">Telling Stories</h2>
                 <h3 class="projectHeadline">Creating an interactive story-based navigation for an artist's website.</h3>
-                <a class="projectLink" href="#">View Casey Study</a>
+                <a class="projectLink" href="#">View Case Study</a>
             </div>
         </div>
     </section>
@@ -86,6 +134,9 @@
             <li><a href="#">Résumé</a></li>
         </ul>
     </footer>
+    <script src="./scripts/index.js"></script>
+
+
 </body>
 
 </html>

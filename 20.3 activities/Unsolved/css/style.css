@@ -1,0 +1,71 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+   }
+   
+   .jumbotron {
+        background: url("../images/hero-background-image.png");
+        background-color: transparent!important;
+        background-repeat: no-repeat;
+        background-position:center top;
+        height: 850px;
+        width: 100%;
+        border: none;
+        padding:0px;
+    }
+
+    .jumbotron-fluid {
+        border: none;
+        background-color:transparent;
+    }
+
+.orangeText {
+    color: #FFA300;
+}
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .jumbotron h1 {
+        font-weight: 200;
+        color: white;
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-top:255px;
+        margin-bottom: 118px;
+    }
+
+.chevron {
+    display: block;
+    width: 45px;
+}
+
+#booking {
+    background: url(../images/adventure-card.png) no-repeat;
+    background-position: bottom left;
+}
+
+#experienceAdventure .card {
+    color: white;
+    padding:50px 0;
+    border: none;
+}
+
+#experienceAdventure .btn {
+    background-color: #FF9900;
+    border: none;
+    border-radius: 0px;
+}
+
+.icon {
+    width: 20%;
+    margin: 35px 0px;
+}

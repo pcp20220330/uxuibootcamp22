@@ -1,3 +1,13 @@
+@font-face {
+    font-family: FuturaMedium;
+    src: url(/fonts/futura-medium.ttf);
+}
+
+@font-face {
+    font-family: TrebuchetMS;
+    src: url(/fonts/trebuchetMS.ttf);
+}
+
 html {
     margin: 0px;
     padding: 0px;
@@ -7,7 +17,7 @@ html {
 }
 
 #landingPage {
-    background: linear-gradient(250deg, rgba(255, 85, 85, 0.3) 0%, rgba(255, 85, 85, 0) 100%), linear-gradient(111deg, rgba(85, 255, 85, 0.3) 0%, rgba(85, 255, 85, 0) 100%), linear-gradient(180deg, rgba(85, 85, 255, 0) 0%, rgba(85, 85, 255, 0.4) 100%), #FFFFFF;
+    background: linear-gradient(235deg, rgba(255, 85, 85, 0.3) 0%, rgba(255, 85, 85, 0) 100%), linear-gradient(115deg, rgba(85, 255, 85, 0.3) 0%, rgba(85, 255, 85, 0) 100%), linear-gradient(180deg, rgba(85, 85, 255, 0) 0%, rgba(85, 85, 255, 0.4) 100%), #FFFFFF;
     background-attachment: fixed;
 }
 
@@ -16,116 +26,247 @@ html {
     background-attachment: fixed;
 }
 
-body,div,section,footer,h1,h2,h3,ul,a {
+body,
+div,
+section,
+footer,
+h1,
+h2,
+h3,
+ul,
+a {
     margin: 0px;
     padding: 0px;
     color: #111;
 }
 
-header {
-    padding: 0px 150px;
-}
-
 nav {
-    display: inline-block;
+    display: flex;
+    justify-content: left;
     width: 100%;
     padding: 50px 0;
 }
 
 nav li {
     display: inline-block;
-    margin-right:75px;
+    margin-right: 75px;
+    margin-bottom: 3px;
 }
 
 nav a {
-    font-family:'Trebuchet MS';
-    font-style:normal;
-    font-weight:600;
-    font-size:36px;
-    line-height:42px;
-    text-decoration: underline;
+    font-family: 'TrebuchetMS', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+    text-decoration: none;
     color: black;
+    padding: 5px 0;
+
 }
 
-nav a:hover {
-    text-decoration:none;
+nav li:hover {
+    border-bottom: 3px solid #111;
+    margin-bottom: 0px;
 }
 
-.homeGrid {
-    display: grid;
-    grid-template-columns: 1fr 252px;
-    grid-template-rows: 1fr 28px 1fr;
-    grid-template-areas: "myName myFace"
-    "myTitle myFace"
-    "myTagline myFace";
-    padding: 0px;
-    margin:50px 0;
+nav li.no-underline:hover {
+    border-bottom: none;
+    margin-bottom: 3px;
 }
 
-.myName, .myTagline {
-    padding-right: 100px;
+
+.myName,
+.myTagline {
+    padding-right: 50px;
 }
 
 .myName {
     grid-area: myName;
-    height:100%;
-    margin:0px;
-    
+    height: 100%;
+    margin: 0px;
+
 }
 
 .myName h1 {
-    font-family: 'Futura', sans-serif;
-    font-style:normal;
-    font-weight:500;
-    font-size:64px;
-    line-height:85px;
+    font-family: 'FuturaMedium', 'Futura', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 85px;
     border-bottom: 1px solid black;
-    padding-bottom:17px;
-    margin:0;
+    padding-bottom: 17px;
+    margin: 0;
 }
 
 .myTitle {
     grid-area: myTitle;
-    margin:10px 0;
-    font-family: 'Trebuchet MS';
-    font-style:normal;
-    font-weight:400;
-    size:24px;
-    line-height:28px;
+    margin: 10px 0;
+    font-family: 'TrebuchetMS', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 28px;
     text-align: right;
     height: 28px;
 }
 
 .myTagline {
     grid-area: myTagline;
-    height:100%;
-    margin:0;
-    font-family:'Trebuchet MS';
-    font-style:normal;
-    font-weight:700;
-    font-size:30px;
-    line-height:35px;
-    margin:30px 0;
+    height: 100%;
+    margin: 0;
+    font-family: 'TrebuchetMS', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    margin: 30px 0;
 }
 
 .myFaceBox {
     grid-area: myFace;
     display: flex;
-    margin:0;
+    margin: 0;
     padding: 10px 0;
-    align-items:baseline;
+    align-items: baseline;
 }
 
 .myFace {
     background: url(../images/Portfolio-Portrait3.png) no-repeat;
     background-size: 250px;
     background-position: bottom;
-    margin:0;
-    width:252px;
+    margin: 0;
+    width: 252px;
     height: 252px;
-    border: 1px solid rgba(0,0,0,0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 250px;
 }
+
+.button {
+    padding: 10px;
+    font-size: 1.5em;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+
+
+  #modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    align-items: stretch;
+    justify-content: center;
+    top:0px;
+    overflow: hidden;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #modal-overlay #modal-background {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    animation: fadeBackground 1s;
+    animation-fill-mode: forwards;
+    background: ;
+    mix-blend-mode: overlay;
+    z-index: 1;
+  }
+  
+  #modal-overlay #modal {
+    max-width: 100%;
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+    color:white;
+    height: fit-content;
+    animation: expandModal 0.75s;
+    animation-fill-mode:forwards;
+    z-index:5;
+    position: relative;
+    flex-direction: column;
+    padding:25px;
+    opacity:1;
+    margin:100px 10%;
+    font-size: 18px;
+    font-family: sans-serif;
+    border-radius: 5px;
+  }
+
+  #modal h1 {
+    color: white;
+    font-family: 'FuturaMedium', 'Futura', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    padding-bottom:15px;
+  }
+
+  .aboutFlex {
+    display: flex;
+  }
+
+ #modal p {
+    color: #ececec;
+    margin-left: 25px;
+    margin-top:0px;
+    font-size: 20px;
+    line-height: 25px;
+    font-family: 'Lato', 'TrebuchetMS', 'Trebuchet MS', Arial, sans-serif;
+ }
+
+  /* @keyframes expandModal {
+    from { top:-100%; }
+    to { top:0px; }
+  } */
+
+  @keyframes expandModal {
+    0% {
+        transform:scale(.8) translateY(0px);
+        opacity:0;
+      }
+      100% {
+        transform:scale(1) translateY(0px);
+        opacity:1;
+      }
+  }
+
+  @keyframes fadeBackground {
+    from { background-color: rgba(0, 0, 0, 0); }
+    to { background-color: rgba(0, 0, 0, 0.5); }
+  }
+  
+  .close-button {
+    background-image: url(../images/close-button.png);
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+  }
+ 
+  .close-button:hover {
+    background-color: transparent;
+    background-image: url(../images/close-button.png);
+    background-blend-mode:screen;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+  }
 
 section {
     margin: 0;
@@ -135,18 +276,21 @@ section {
 #mySkills {
     display: flex;
     margin: 25px 0;
-    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-family: 'TrebuchetMS', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     flex-direction: column;
 }
 
-#mySkills h1 {
-    font-family: 'Futura';
-font-style: normal;
-font-weight: 500;
-font-size: 64px;
-line-height: 85px;
-margin: 10px auto;
-width: 100%;
+#mySkills h1,
+.sectionOne h1 {
+    font-family: 'FuturaMedium', 'Futura', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 85px;
+    margin: 25px auto;
+    padding-bottom:15px;
+    width: 100%;
+    border-bottom: 1px solid #111;
 }
 
 .skillsContainer {
@@ -164,7 +308,7 @@ width: 100%;
     flex-direction: column;
     padding: 20px;
     background: rgba(255, 255, 255, 0.5);
-    border: rgba(0,0,0,0.5) 1px solid;
+    border: rgba(0, 0, 0, 0.5) 1px solid;
     border-radius: 3px;
 }
 
@@ -176,25 +320,25 @@ width: 100%;
     text-align: center;
     margin: 15px 0 10px 0;
     font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 28px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
 }
 
 .skillBox p {
     font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 23px;
-text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
 }
 
 .sectionOne {
-background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 
 .section {
-    background:rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .projectGrid {
@@ -221,25 +365,33 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 25
 }
 
 .projectDescription h1 {
-font-weight: 700;
-font-size: 64px;
-line-height: 74px;
-margin-bottom: 17px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+    margin-bottom: 17px;
+}
+
+.projectTitle {
+    margin: 15px 0 10px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 35px;
 }
 
 .projectHeadline {
-font-weight: 400;
-font-size: 24px;
-line-height: 28px;
-margin-bottom: 17px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 17px;
 }
 
 .projectLink {
-font-weight: 700;
-font-size: 24px;
-line-height: 28px;
-text-decoration-line: underline;
-color:#111;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration-line: underline;
+    color: #111;
 }
 
 .projectImage {
@@ -255,7 +407,7 @@ footer {
 }
 
 footer ul {
-    padding:0 150px;
+    padding: 0 150px;
 }
 
 footer li {
@@ -273,10 +425,45 @@ footer a {
     color: #111;
 }
 
-@media only screen and (min-width:) {
-
-}
-
-@media only screen and () {
+@media only screen and (min-width:1290px) {
+   
+    header {
+        padding: 0px 10%;
+        margin-top:150px;
+    }
+   
+   
+    .homeGrid {
+        display: grid;
+        grid-template-columns: 1fr 252px;
+        grid-template-rows: 1fr 28px 1fr;
+        grid-template-areas: "myName myFace"
+            "myTitle myFace"
+            "myTagline myFace";
+        padding: 0px;
+        margin:0px;
+    }
     
 }
+
+@media only screen and (max-width:1290px) {
+
+    header {
+        padding: 0px 25px;
+        margin-top:150px;
+    }
+
+
+    .homeGrid {
+        display: grid;
+        grid-template-columns: 1fr 252px;
+        grid-template-rows: 1fr 28px 1fr;
+        grid-template-areas: "myName myFace"
+            "myTitle myFace"
+            "myTagline myFace";
+        padding: 0px;
+        margin:0px;
+    }
+
+}
+
