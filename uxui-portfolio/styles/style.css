@@ -16,6 +16,10 @@ html {
     width: 100%;
 }
 
+body {
+    background-color: transparent!important;
+}
+
 #landingPage {
     background: linear-gradient(235deg, rgba(255, 85, 85, 0.3) 0%, rgba(255, 85, 85, 0) 100%), linear-gradient(115deg, rgba(85, 255, 85, 0.3) 0%, rgba(85, 255, 85, 0) 100%), linear-gradient(180deg, rgba(85, 85, 255, 0) 0%, rgba(85, 85, 255, 0.4) 100%), #FFFFFF;
     background-attachment: fixed;
