@@ -1,3 +1,5 @@
+/* Global Styles */
+
 @font-face {
     font-family: FuturaMedium;
     src: url(/fonts/futura-medium.ttf);
@@ -6,28 +8,6 @@
 @font-face {
     font-family: TrebuchetMS;
     src: url(/fonts/trebuchetMS.ttf);
-}
-
-html {
-    margin: 0px;
-    padding: 0px;
-    min-height: 100%;
-    height: 100vh;
-    width: 100%;
-}
-
-body {
-    background-color: transparent!important;
-}
-
-#landingPage {
-    background: linear-gradient(235deg, rgba(255, 85, 85, 0.3) 0%, rgba(255, 85, 85, 0) 100%), linear-gradient(115deg, rgba(85, 255, 85, 0.3) 0%, rgba(85, 255, 85, 0) 100%), linear-gradient(180deg, rgba(85, 85, 255, 0) 0%, rgba(85, 85, 255, 0.4) 100%), #FFFFFF;
-    background-attachment: fixed;
-}
-
-#greenBackground {
-    background: linear-gradient(135deg, #D9FFD9 0%, #FFFFFF 100%);
-    background-attachment: fixed;
 }
 
 body,
@@ -44,17 +24,16 @@ a {
     color: #111;
 }
 
-nav {
-    display: flex;
-    justify-content: left;
+html {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100vh;
     width: 100%;
-    padding: 50px 0;
 }
 
-nav li {
-    display: inline-block;
-    margin-right: 75px;
-    margin-bottom: 3px;
+body {
+    background-color: transparent!important;
 }
 
 nav a {
@@ -66,19 +45,189 @@ nav a {
     text-decoration: none;
     color: black;
     padding: 5px 0;
-
 }
 
-nav li:hover {
+section {
+    margin: 0;
+    padding: 0 150px;
+}
+
+footer {
+    background-color: white;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+footer ul {
+    padding: 0 150px;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+footer a {
+    font-family: 'Futura';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-decoration-line: underline;
+    color: #111;
+}
+
+/* Modal */
+
+.button {
+    padding: 10px;
+    font-size: 1.5em;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  #modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    align-items: stretch;
+    justify-content: center;
+    top:0px;
+    overflow: hidden;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #modal-overlay #modal-background {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    animation: fadeBackground 1s;
+    animation-fill-mode: forwards;
+    mix-blend-mode: overlay;
+    z-index: 1;
+  }
+  
+  #modal-overlay #modal {
+    max-width: 100%;
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+    color:white;
+    height: fit-content;
+    animation: expandModal 0.75s;
+    animation-fill-mode:forwards;
+    z-index:5;
+    position: relative;
+    flex-direction: column;
+    padding:25px;
+    opacity:1;
+    margin:100px 10%;
+    font-size: 18px;
+    font-family: sans-serif;
+    border-radius: 5px;
+  }
+
+  #modal h1 {
+    color: white;
+    font-family: 'FuturaMedium', 'Futura', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    padding-bottom:15px;
+  }
+
+  .aboutFlex {
+    display: flex;
+  }
+
+ #modal p {
+    color: #ececec;
+    margin-left: 25px;
+    margin-top:0px;
+    font-size: 20px;
+    line-height: 25px;
+    font-family: 'Lato', 'TrebuchetMS', 'Trebuchet MS', Arial, sans-serif;
+ }
+
+ @keyframes expandModal {
+    0% {
+        transform:scale(.8) translateY(0px);
+        opacity:0;
+      }
+      100% {
+        transform:scale(1) translateY(0px);
+        opacity:1;
+      }
+  }
+
+  @keyframes fadeBackground {
+    from { background-color: rgba(0, 0, 0, 0); }
+    to { background-color: rgba(0, 0, 0, 0.5); }
+  }
+
+  .close-button {
+    background-image: url(../images/close-button.png);
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+  }
+ 
+  .close-button:hover {
+    background-color: transparent;
+    background-image: url(../images/close-button.png);
+    background-blend-mode:screen;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+  }
+
+/* Home Page Styles */
+
+#landingPage {
+    background: linear-gradient(235deg, rgba(255, 85, 85, 0.3) 0%, rgba(255, 85, 85, 0) 100%), linear-gradient(115deg, rgba(85, 255, 85, 0.3) 0%, rgba(85, 255, 85, 0) 100%), linear-gradient(180deg, rgba(85, 85, 255, 0) 0%, rgba(85, 85, 255, 0.4) 100%), #FFFFFF;
+    background-attachment: fixed;
+}
+
+#landingPage nav {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    padding: 50px 0;
+}
+
+#landingPage nav li {
+    display: inline-block;
+    margin-right: 75px;
+    margin-bottom: 3px;
+}
+
+#landingPage nav li:hover {
     border-bottom: 3px solid #111;
     margin-bottom: 0px;
 }
 
-nav li.no-underline:hover {
+#landingPage nav li.no-underline:hover {
     border-bottom: none;
     margin-bottom: 3px;
 }
-
 
 .myName,
 .myTagline {
@@ -144,137 +293,6 @@ nav li.no-underline:hover {
     height: 252px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 250px;
-}
-
-.button {
-    padding: 10px;
-    font-size: 1.5em;
-    background: #111;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: rgba(0, 0, 0, 0.7);
-  }
-  
-
-
-  #modal-overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    align-items: stretch;
-    justify-content: center;
-    top:0px;
-    overflow: hidden;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  #modal-overlay #modal-background {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    animation: fadeBackground 1s;
-    animation-fill-mode: forwards;
-    background: ;
-    mix-blend-mode: overlay;
-    z-index: 1;
-  }
-  
-  #modal-overlay #modal {
-    max-width: 100%;
-    width: 100%;
-    background-color: rgb(24, 24, 24);
-    color:white;
-    height: fit-content;
-    animation: expandModal 0.75s;
-    animation-fill-mode:forwards;
-    z-index:5;
-    position: relative;
-    flex-direction: column;
-    padding:25px;
-    opacity:1;
-    margin:100px 10%;
-    font-size: 18px;
-    font-family: sans-serif;
-    border-radius: 5px;
-  }
-
-  #modal h1 {
-    color: white;
-    font-family: 'FuturaMedium', 'Futura', Arial, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 60px;
-    padding-bottom:15px;
-  }
-
-  .aboutFlex {
-    display: flex;
-  }
-
- #modal p {
-    color: #ececec;
-    margin-left: 25px;
-    margin-top:0px;
-    font-size: 20px;
-    line-height: 25px;
-    font-family: 'Lato', 'TrebuchetMS', 'Trebuchet MS', Arial, sans-serif;
- }
-
-  /* @keyframes expandModal {
-    from { top:-100%; }
-    to { top:0px; }
-  } */
-
-  @keyframes expandModal {
-    0% {
-        transform:scale(.8) translateY(0px);
-        opacity:0;
-      }
-      100% {
-        transform:scale(1) translateY(0px);
-        opacity:1;
-      }
-  }
-
-  @keyframes fadeBackground {
-    from { background-color: rgba(0, 0, 0, 0); }
-    to { background-color: rgba(0, 0, 0, 0.5); }
-  }
-  
-  .close-button {
-    background-image: url(../images/close-button.png);
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-  }
- 
-  .close-button:hover {
-    background-color: transparent;
-    background-image: url(../images/close-button.png);
-    background-blend-mode:screen;
-    cursor: pointer;
-    height: 40px;
-    width: 40px;
-  }
-
-section {
-    margin: 0;
-    padding: 0 150px;
 }
 
 #mySkills {
@@ -402,36 +420,125 @@ section {
     grid-area: projectImage;
 }
 
-footer {
-    background-color: white;
-    width: 100%;
-    height: 150px;
+/* Global Project Styles */
+
+#projectNav {
     display: flex;
+    margin: 50px 125px;
+}
+
+
+/* Collectively Styles */
+
+#greenBackground {
+    background: linear-gradient(135deg, #D9FFD9 0%, #FFFFFF 100%);
+    background-attachment: fixed;
+}
+
+.collectivelyHomeScreen {
+    display: flex;
+    width:100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.collectivelyHomeScreen img {
+    max-width: 250px;
+    margin:0 60px;
+}
+
+#collectivelyOverview h1, #collectivelyOverview h3, #collectivelyOverview span {
+    width: 100%;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#collectivelyOverview h1 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+    margin-bottom: 0px;
+    height: auto;
+}
+
+#collectivelyOverview span {
+    width: 100%;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 50px;
+}
+
+#collectivelyOverview p {
+    font-family: 'Lato', 'TrebuchetMS', 'Trebuchet MS', Arial, sans-serif;
+    font-size:18px
+}
+
+#collectivelyOverview .container-fluid, #collectivelyOverview .row {
+    height: 100%;
+}
+
+#collectivelyOverview .columnContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.processJumbo {
+    background-color: rgba(255, 255, 255, 0.5)!important;
+    border: 1px solid #111;
+    padding: 20px!important;
+}
+
+.processJumbo .columnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+
+}
+
+.processDetail {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+    gap: 10px;
     align-items: center;
 }
 
-footer ul {
-    padding: 0 150px;
+.processDetail > * {
+    display: inline;
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
-footer li {
-    display: inline-block;
-    margin-right: 50px;
-}
-
-footer a {
-    font-family: 'Futura';
-    font-style: normal;
-    font-weight: 500;
+.processDetail h3 {
+    font-weight: 700;
     font-size: 24px;
-    line-height: 32px;
-    text-decoration-line: underline;
-    color: #111;
+    line-height: 28px;
 }
+
+.processDetail p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+/* Bootstrap Edits */
+
+
+
+
+
+  
+
+/* Media Queries */
 
 @media only screen and (min-width:1290px) {
    
-    header {
+    #landingPage header {
         padding: 0px 10%;
         margin-top:150px;
     }
@@ -452,7 +559,7 @@ footer a {
 
 @media only screen and (max-width:1290px) {
 
-    header {
+    #landingPage header {
         padding: 0px 25px;
         margin-top:150px;
     }
@@ -470,4 +577,29 @@ footer a {
     }
 
 }
+
+@media only screen and (min-height:850px) {
+   
+    #collectivelyOverview {
+        height: 659px;
+        margin: 0 10%;
+        display: flex;
+        justify-items: start;
+    
+    }
+    
+}
+
+@media only screen and (max-height:850px) {
+
+    #collectivelyOverview {
+        height: calc(100vh - 158px);
+        margin: 0 10%;
+        display: flex;
+        justify-items: start;
+    
+    }
+
+}
+
 
