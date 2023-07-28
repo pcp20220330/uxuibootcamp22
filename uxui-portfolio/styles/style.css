@@ -22,6 +22,7 @@ a {
     margin: 0px;
     padding: 0px;
     color: #111;
+    position: relative;
 }
 
 html {
@@ -34,17 +35,6 @@ html {
 
 body {
     background-color: transparent!important;
-}
-
-nav a {
-    font-family: 'TrebuchetMS', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 42px;
-    text-decoration: none;
-    color: black;
-    padding: 5px 0;
 }
 
 section {
@@ -77,6 +67,18 @@ footer a {
     line-height: 32px;
     text-decoration-line: underline;
     color: #111;
+}
+
+.sectionOne {
+    height: auto;
+    overflow-y: scroll;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.section {
+    height: 100%;
+    overflow-y: scroll;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 /* Modal */
@@ -213,6 +215,17 @@ footer a {
     padding: 50px 0;
 }
 
+#landingPage nav a {
+    font-family: 'TrebuchetMS', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+    text-decoration: none;
+    color: black;
+    padding: 5px 0;
+}
+
 #landingPage nav li {
     display: inline-block;
     margin-right: 75px;
@@ -302,8 +315,8 @@ footer a {
     flex-direction: column;
 }
 
-#mySkills h1,
-.sectionOne h1 {
+#landingPage #mySkills h1,
+#landingPage .sectionOne h1 {
     font-family: 'FuturaMedium', 'Futura', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -353,14 +366,6 @@ footer a {
     font-size: 20px;
     line-height: 23px;
     text-align: center;
-}
-
-.sectionOne {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
-}
-
-.section {
-    background: rgba(255, 255, 255, 0.5);
 }
 
 .projectGrid {
@@ -462,6 +467,16 @@ footer a {
     height: auto;
 }
 
+h1.projectSectionTitle {
+    width: 100%;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    height: auto;
+    text-align: center;
+    font-family: 'TrebuchetMS', sans-serif;
+}
+
 #collectivelyOverview span {
     width: 100%;
     font-weight: 400;
@@ -497,7 +512,15 @@ footer a {
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
+    margin: 0px!important;
 
+}
+
+.processJumbo .processQuote {
+    font-family: 'Lato', 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
 }
 
 .processDetail {
@@ -524,6 +547,14 @@ footer a {
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
+}
+
+nav#casestudy {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    
 }
 
 /* Bootstrap Edits */
